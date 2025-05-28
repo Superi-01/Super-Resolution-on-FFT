@@ -46,17 +46,18 @@ def visualize_test_result(model, test_dl, opt):
             plt.figure(figsize=(12, 4))
             plt.subplot(1, 3, 1)
             plt.title(f"Input (LR)\nPSNR: {calc_psnr(input_img, target_img):.2f} dB")
-            plt.imshow(input_img.numpy(), cmap='gray')
+            plt.imshow(input_img.numpy(), cmap='gray', vmin=0, vmax=255)
             plt.axis('off')
 
             plt.subplot(1, 3, 2)
             plt.title("Output (SR)")
             plt.title(f"Output (SR)\nPSNR: {calc_psnr(output_img, target_img):.2f} dB")
+            plt.imshow(output_img.numpy(), cmap='gray', vmin=0, vmax=255)
             plt.axis('off')
 
             plt.subplot(1, 3, 3)
             plt.title("Target (HR)")
-            plt.imshow(target_img.numpy(), cmap='gray')
+            plt.imshow(target_img.numpy(), cmap='gray', vmin=0, vmax=255)
             plt.axis('off')
 
             plt.tight_layout()

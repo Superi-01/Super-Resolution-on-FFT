@@ -19,7 +19,7 @@ def get_args():
     parser.add_argument('--lr_length',type=int, default=1000, help='length of low-resolution signal')
     parser.add_argument('--hr_length',type=int, default=10000)
     
-    parser.add_argument('--n_samples',type=int, default=100)
+    parser.add_argument('--n_samples',type=int, default=1)
     parser.add_argument('--patch_size',type=int, default=128)
     parser.add_argument('--stride',type=int, default=96)
     parser.add_argument('--batch_size',type=int, default=16)
