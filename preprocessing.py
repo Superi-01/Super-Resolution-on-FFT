@@ -15,7 +15,7 @@ class FFTProcessor():
         t = np.linspace(0, length, int(self.opt.sampling_frequency), endpoint=False)
         x = np.zeros_like(t)
         
-        num_components = np.random.randint(20, 50)  # 2~4
+        num_components = np.random.randint(20, 50)  # 20~50
         for _ in range(num_components):
             A = np.random.uniform(0.5, 3.0)            # 진폭
             f = np.random.uniform(1, 20)               # 주파수 (Hz)
